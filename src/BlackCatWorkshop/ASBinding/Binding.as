@@ -12,6 +12,8 @@ package BlackCatWorkshop.ASBinding
 		protected var _property2:BindingProperty;
 		protected var _bindingContext:BindingContext;
 		
+		protected var _enabled:Boolean = true;
+		
 		public function Binding(property1:BindingProperty, property2:BindingProperty, context:BindingContext)
 		{
 			_property1 = property1;
@@ -33,6 +35,15 @@ package BlackCatWorkshop.ASBinding
 		public function get context():BindingContext
 		{
 			return _bindingContext;
+		}
+		
+		public function set enabled(value:Boolean):void
+		{
+			_enabled = value;
+		}
+		public function get enabled():Boolean
+		{
+			return _enabled;
 		}
 	}
 }

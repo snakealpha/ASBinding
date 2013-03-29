@@ -21,7 +21,14 @@ package BlackCatWorkshop.ASBinding
 		
 		protected function onSourceValueChanged(event:BindingEvent):void
 		{
-			_property2.setValue(event.source.value);
+			if(enabled)
+			{
+				if(context.excutePredicates != null && context.excutePredicates.call() == true)
+				{
+					_property2.setValue(event.source.value);
+					context.postProcess.call();
+				}
+			}
 		}
 	}
 }

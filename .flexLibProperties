@@ -7,6 +7,7 @@
     <classEntry path="BlackCatWorkshop.ASBinding.OneWayBinding"/>
     <classEntry path="BlackCatWorkshop.ASBinding.BindingEvent"/>
     <classEntry path="BlackCatWorkshop.ASBinding.BindingError"/>
+    <classEntry path="BlackCatWorkshop.ASBinding.BindingManager"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
