@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="BlackCatWorkshop.ASBinding.BindingContext"/>
+    <classEntry path="BlackCatWorkshop.ASBinding.Binding"/>
+    <classEntry path="BlackCatWorkshop.ASBinding.BindingProperty"/>
+    <classEntry path="BlackCatWorkshop.ASBinding.OneWayBinding"/>
+    <classEntry path="BlackCatWorkshop.ASBinding.BindingEvent"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
