@@ -10,13 +10,22 @@ package BlackCatWorkshop.ASBinding
 	{
 		private var _enabled:Boolean = true;
 		
+		private var _projectFunction:Function;
 		private var _excutePredicates:Function;
 		private var _postProcess:Function;
 		
-		public function BindingContext(excutePredicate:Function = null, postProcess:Function = null)
+		public function BindingContext(projectFunction:Function = null, 
+									   excutePredicate:Function = null, 
+									   postProcess:Function = null)
 		{
+			_projectFunction = projectFunction;
 			_excutePredicates = excutePredicate;
 			_postProcess = postProcess;
+			
+			if(_projectFunction == null)
+			{
+				_projectFunction = defaultProjectFunction;
+			}
 		}
 		
 		/**
@@ -31,6 +40,15 @@ package BlackCatWorkshop.ASBinding
 			return _enabled;
 		}
 		
+		/**
+		 * porjectFunction is a kind of function that receive a value and return another value that may be different from the input, it is used to tramsform a value to an other, which is really used while binding.
+		 * If no projectFunction is specified while constructing, a function returns its only argument will be used.
+		 */
+		public function get projectFunction():Function
+		{
+			return _projectFunction;
+		}
+		
 		public function get excutePredicates():Function
 		{
 			return _excutePredicates;
@@ -39,6 +57,11 @@ package BlackCatWorkshop.ASBinding
 		public function get postProcess():Function
 		{
 			return _postProcess;
+		}
+		
+		private function defaultProjectFunction(value:Object):Object
+		{
+			return value;
 		}
 	}
 }

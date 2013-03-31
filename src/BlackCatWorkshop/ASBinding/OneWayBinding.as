@@ -2,6 +2,11 @@ package BlackCatWorkshop.ASBinding
 {
 	public class OneWayBinding extends Binding
 	{
+		/**
+		 * OneWayBinding is the most simply binding. 
+		 * Only one source and a target are in this binding.
+		 * When source has been set value, target will change; NO vice versa.
+		 */
 		public function OneWayBinding(source:BindingProperty, object:BindingProperty, context:BindingContext)
 		{
 			super(property1, property2, context);
@@ -23,9 +28,9 @@ package BlackCatWorkshop.ASBinding
 		{
 			if(enabled)
 			{
-				if(context.excutePredicates != null && context.excutePredicates.call() == true)
+				if(context.excutePredicates != null && context.excutePredicates() == true)
 				{
-					_property2.setValue(event.source.value);
+					_property2.setValue(context.projectFunction(event.source.value));
 					context.postProcess.call();
 				}
 			}

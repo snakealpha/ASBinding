@@ -4,7 +4,7 @@ package BlackCatWorkshop.ASBinding
 
 	/**
 	 * Base class of all kinds of bindings.
-	 * Should not be used dircetly.
+	 * Note that not only references of objects in a binding are holded by the binding itself, but also closures that have functions used in a binding. Binding will prevent GC。
 	 */
 	public class Binding extends EventDispatcher
 	{
