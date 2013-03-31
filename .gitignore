@@ -3,7 +3,7 @@
 #################
 
 *.pydevproject
-.project
+#.project
 .metadata
 bin/
 tmp/
@@ -140,7 +140,7 @@ dist
 build
 eggs
 parts
-bin
+#bin
 var
 sdist
 develop-eggs
@@ -163,4 +163,4 @@ pip-log.txt
 .DS_Store
 
 # AS
-bin
+#bin
