@@ -30,6 +30,7 @@ package BlackCatWorkshop.ASBinding
 		
 		/**
 		 * Register a data binding.
+		 * Note that no work were done to hold your binding. You must avoid your binding from being GCed yourself.
 		 * 
 		 * @param sourceObj 		Object of source field.
 		 * @param sourceFieldName	Name of source field.

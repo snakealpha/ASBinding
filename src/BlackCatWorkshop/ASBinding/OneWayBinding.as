@@ -9,9 +9,9 @@ package BlackCatWorkshop.ASBinding
 		 */
 		public function OneWayBinding(source:BindingProperty, object:BindingProperty, context:BindingContext)
 		{
-			super(property1, property2, context);
+			super(source, object, context);
 			
-			addEventListener(BindingEvent.ValueHasBeenChanged, onSourceValueChanged);
+			source.addEventListener(BindingEvent.ValueHasBeenChanged, onSourceValueChanged);
 		}
 		
 		public function get source():BindingProperty

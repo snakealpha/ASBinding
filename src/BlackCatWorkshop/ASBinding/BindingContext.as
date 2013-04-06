@@ -26,6 +26,14 @@ package BlackCatWorkshop.ASBinding
 			{
 				_projectFunction = defaultProjectFunction;
 			}
+			if(_excutePredicates == null)
+			{
+				_excutePredicates = defaultExcutePredicate;
+			}
+			if(_postProcess == null)
+			{
+				_postProcess = defaultPostPress;
+			}
 		}
 		
 		/**
@@ -62,6 +70,16 @@ package BlackCatWorkshop.ASBinding
 		private function defaultProjectFunction(value:Object):Object
 		{
 			return value;
+		}
+		
+		private function defaultExcutePredicate():Boolean
+		{
+			return true;
+		}
+		
+		private function defaultPostPress():void
+		{
+			
 		}
 	}
 }
